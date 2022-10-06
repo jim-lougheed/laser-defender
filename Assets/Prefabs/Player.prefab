@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7247912956360726107}
   - component: {fileID: 1397427661219154578}
-  - component: {fileID: 8569576173235724806}
-  m_Layer: 0
+  - component: {fileID: 1046339876}
+  - component: {fileID: 985649993002641054}
+  - component: {fileID: 6249355892914836831}
+  - component: {fileID: -836663437703000032}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +67,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8569576173235724806
+--- !u!114 &1046339876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,7 +76,61 @@ MonoBehaviour:
   m_GameObject: {fileID: 4099594683267969702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06e614d8c1491d429f4023295d22073, type: 3}
+  m_Script: {fileID: 11500000, guid: a5c84eb25c360af45be00ca59aef8104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  padTop: 5
+  padRight: 0.5
+  padBottom: 2.5
+  padLeft: 0.5
+--- !u!50 &985649993002641054
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099594683267969702}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &6249355892914836831
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099594683267969702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.047640085}
+  serializedVersion: 2
+  m_Radius: 0.4019177
+--- !u!114 &-836663437703000032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099594683267969702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db88e74b1acbb3143afe28f6fe7c1181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6580067649717309476
@@ -86,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7006652788301435940}
   - component: {fileID: 6697654329256215338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: playerShip2_orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6580067649717309476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.882564, y: 0.93696386, z: -0.038315095}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -146,8 +203,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1435255575
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2d70852f26edf744aac5360b52a8a8be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
