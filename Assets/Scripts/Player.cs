@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    Shooter shooter;
     Vector2 rawInput;
     [SerializeField] float moveSpeed = 2f;
 
@@ -15,6 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] float padBottom;
     [SerializeField] float padLeft;
 
+    void Awake() {
+        shooter = GetComponent<Shooter>();
+    }
     void Start() {
         InitBounds();
     }
@@ -28,6 +32,12 @@ public class Player : MonoBehaviour
         Camera mainCamera = Camera.main;
         minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
         maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
+    }
+
+    void OnFire(InputValue value) {
+        if (shooter != null) {
+            shooter.isFiring = value.isPressed;
+        }
     }
 
     void OnMove(InputValue value) {
