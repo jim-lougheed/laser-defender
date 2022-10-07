@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  hitEffect: {fileID: 2470026398976691485, guid: 9a143b39614af4b46b2acd7a94590560, type: 3}
 --- !u!114 &5501315422824002177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,9 +109,9 @@ MonoBehaviour:
   projectileLifetime: 5
   baseFiringRate: 1
   useAI: 1
-  isFiring: 0
   firingTimeVariance: 0.5
   minFiringTime: 0.1
+  isFiring: 0
 --- !u!1 &2711930513586615961
 GameObject:
   m_ObjectHideFlags: 0
